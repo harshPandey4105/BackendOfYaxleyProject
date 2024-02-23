@@ -25,6 +25,12 @@ const schema=new mongoose.Schema({
     pu4:String,
     image:String
 });
-const CountryInfoModel=mongoose.model('faqsForCountryInfoDashboard',schema);
+const schema2=new mongoose.Schema({
+    selectedState:String,
+    inputValue:String,
+    textAreaValue:String,
+});
+const CountryInfoModel=mongoose.model('CountryInfoDashboard',schema);
+const CountryInfoFaqsModel=mongoose.model('faqsForCountryInfoDashboard',schema2);
 
-module.exports=CountryInfoModel;
+module.exports = { CountryInfoModel, CountryInfoFaqsModel };
