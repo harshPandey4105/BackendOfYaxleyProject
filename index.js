@@ -12,7 +12,9 @@ require("./db/config");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-app.use(cors());
+app.use(cors({
+    origin: 'https://yaxley-global-project.vercel.app'
+}));
 app.use(express.json());
 
 app.post('/dashboardHome', async (req, res) => {
@@ -103,7 +105,7 @@ app.post('/dashboardEvents', upload.array('images', 4), async (req, res) => {
     const image = req.files[3].filename;
     try {
         const newData = new EventsDashboardModel({
-           image1,image2,image3,image, LT1, PU1, PU2, PU3, PU4, P1, P2, P3, P4, eventHeading, webAndEvent, description, date, LtL1, LtL2, PUL1, PUL2
+            image1, image2, image3, image, LT1, PU1, PU2, PU3, PU4, P1, P2, P3, P4, eventHeading, webAndEvent, description, date, LtL1, LtL2, PUL1, PUL2
         });
         const result = await newData.save();
         console.log(result);
@@ -129,12 +131,12 @@ app.get('/faqsdashboardEvents', async (req, res) => {
     res.send(data);
 })
 
-app.post('/dashboardTestPrep',upload.single('image'), async (req, res) => {
+app.post('/dashboardTestPrep', upload.single('image'), async (req, res) => {
     const { P1, P2, P3, P4, IELTS, batchName, description, date, LtL1, LtL2, PUL1, PUL2 } = req.body;
     const image = req.file ? req.file.filename : '';
     try {
         const newData = new TestPrepDashboardModel({
-            image,P1, P2, P3, P4, IELTS, batchName, description, date, LtL1, LtL2, PUL1, PUL2 
+            image, P1, P2, P3, P4, IELTS, batchName, description, date, LtL1, LtL2, PUL1, PUL2
         });
         const result = await newData.save();
         console.log(result);
