@@ -4,6 +4,6 @@ const schema=new mongoose.Schema({
     inputValue:String,
     textAreaValue:String,
 });
-const faqsContactUsModel=mongoose.model('faqsForContactUsDashboard',schema);
+const faqsContactUsModel=mongoose.model('FaqsContactUs',schema);
 
 module.exports=faqsContactUsModel;

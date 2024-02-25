@@ -30,7 +30,7 @@ const schema2=new mongoose.Schema({
     inputValue:String,
     textAreaValue:String,
 });
-const CountryInfoModel=mongoose.model('CountryInfoDashboard',schema);
-const CountryInfoFaqsModel=mongoose.model('faqsForCountryInfoDashboard',schema2);
+const CountryInfoModel=mongoose.model('CountryInfo',schema);
+const CountryInfoFaqsModel=mongoose.model('FaqsCountryInfo',schema2);
 
 module.exports = { CountryInfoModel, CountryInfoFaqsModel };

@@ -27,8 +27,8 @@ const schema2=new mongoose.Schema({
     inputValue:String,
     textAreaValue:String,
 });
-const EventsDashboardModel=mongoose.model('EventsDashboard',schema);
-const faqsForEventsDashboardModel=mongoose.model('faqsForEventsDashboard',schema2);
+const EventsDashboardModel=mongoose.model('Events',schema);
+const faqsForEventsDashboardModel=mongoose.model('FaqsEvents',schema2);
 
 module.exports = { EventsDashboardModel, faqsForEventsDashboardModel };
 

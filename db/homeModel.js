@@ -4,6 +4,6 @@ const schema=new mongoose.Schema({
     inputValue:String,
     textAreaValue:String,
 });
-const faqsHomeModel=mongoose.model('faqsForHomeDashboard',schema);
+const faqsHomeModel=mongoose.model('FqsHome',schema);
 
 module.exports=faqsHomeModel;

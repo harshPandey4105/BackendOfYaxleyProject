@@ -13,7 +13,7 @@ require("./db/config");
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.use(cors({
-    origin: 'https://yaxley-global-project.vercel.app'
+    // origin: 'https://yaxley-global-project.vercel.app'
 }));
 app.use(express.json());
 

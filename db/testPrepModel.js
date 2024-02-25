@@ -19,8 +19,8 @@ const schema2=new mongoose.Schema({
     inputValue:String,
     textAreaValue:String,
 });
-const TestPrepDashboardModel=mongoose.model('TestPrepDashboard',schema);
-const faqsForTestPrepDashboardModel=mongoose.model('faqsForTestPrepDashboard',schema2);
+const TestPrepDashboardModel=mongoose.model('TestPrep',schema);
+const faqsForTestPrepDashboardModel=mongoose.model('FaqsTestPrep',schema2);
 
 module.exports = { TestPrepDashboardModel, faqsForTestPrepDashboardModel };
 
